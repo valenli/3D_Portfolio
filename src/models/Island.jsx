@@ -39,11 +39,18 @@ const Island = ({
     lastX.current = clientX;
   };
 
+
+
+
   const handlePointerUp = (e) => {
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(false);
   };
+
+
+
+
 
   const handlePointerMove = (e) => {
     e.stopPropagation();
@@ -58,16 +65,25 @@ const Island = ({
     }
   };
 
+
+
+
   const handleKeyDown = (e) => {
     if (e.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true);
 
       islandRef.current.rotation.y += 0.01 * Math.PI;
+      rotationSpeed.current = 0.0125;
     } else if (e.key === "ArrowRight") {
       if (!isRotating) setIsRotating(true);
       islandRef.current.rotation.y -= 0.01 * Math.PI;
+      rotationSpeed.current = -0.0125;
     }
   };
+
+
+
+
   const handleKeyUp = (e) => {
     if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
       setIsRotating(false);
@@ -125,16 +141,16 @@ const Island = ({
 
   useEffect(() => {
     const canvas = gl.domElement;
-    canvas.addEventListener("poinerdown", handlePointerDown);
-    canvas.addEventListener("poinerup", handlePointerUp);
-    canvas.addEventListener("poinermove", handlePointerMove);
+    canvas.addEventListener("pointerdown", handlePointerDown);
+    canvas.addEventListener("pointerup", handlePointerUp);
+    canvas.addEventListener("pointermove", handlePointerMove);
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keyup", handleKeyUp);
 
     return () => {
-      canvas.removeEventListener("poinerdown", handlePointerDown);
-      canvas.removeEventListener("poinerup", handlePointerUp);
-      canvas.removeEventListener("poinermove", handlePointerMove);
+      canvas.removeEventListener("pointerdown", handlePointerDown);
+      canvas.removeEventListener("pointerup", handlePointerUp);
+      canvas.removeEventListener("pointermove", handlePointerMove);
       document.removeEventListener("keyDown", handleKeyDown);
       document.removeEventListener("keyUp", handleKeyUp);
     };
