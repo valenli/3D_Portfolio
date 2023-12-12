@@ -1,3 +1,6 @@
+import { v4 as uuidv4 } from "uuid";
+
+
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -27,9 +30,14 @@ const About = () => {
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">My Skills</h3>
 
+        {/* key的部分要下修 Done! */}
+
         <div className="mt-16 flex flex-wrap gap-12">
           {skills.map((skill) => (
-            <div className="block-container w-20 h-20">
+            <div
+              key={skill.id || uuidv4()}
+              className="block-container w-20 h-20"
+            >
               <div className="btn-back rounded-xl" />
               <div className="btn-front rounded-xl flex justify-center items-center">
                 <img

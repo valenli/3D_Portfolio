@@ -25,7 +25,7 @@ import {
     threads,
     typescript
 } from "../assets/icons";
-
+//技能樹
 export const skills = [
     {
         imageUrl: css,
@@ -108,7 +108,7 @@ export const skills = [
         type: "Frontend",
     }
 ];
-
+//經驗
 export const experiences = [
     {
         title: "React.js Developer",
@@ -163,7 +163,7 @@ export const experiences = [
         ],
     },
 ];
-
+//社交媒體帳號
 export const socialLinks = [
     {
         name: 'Contact',
@@ -181,7 +181,7 @@ export const socialLinks = [
         link: 'https://www.linkedin.com/in/YourLinkedInUsername',
     }
 ];
-
+//作品
 export const projects = [
     {
         iconUrl: pricewise,

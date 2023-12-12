@@ -7,7 +7,7 @@ import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("idle");
@@ -28,7 +28,7 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Adrian",
+          to_name: "Valen",
           from_email: form.email,
           to_email: "contact@jsmastery.pro",
           message: form.message,
@@ -39,7 +39,7 @@ const Contact = () => {
         setIsLoading(false);
         showAlert({
           show: true,
-          text: "Message sent successfully!",
+          text: "Thank you for your message!",
           type: "success",
         });
 
@@ -70,6 +70,7 @@ const Contact = () => {
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
         <form
+          ref={formRef}
           className="w-full flex flex-col gap-7 mt-14"
           onSubmit={handleSubmit}
         >
@@ -138,14 +139,14 @@ const Contact = () => {
         >
           <directionalLight intensity={2.5} position={[0, 0, 1]} />
           <ambientLight intensity={0.5} />
-          <Suspense fallback={<Loader />}>
+          {/* <Suspense fallback={<Loader />}> */}
             <Fox
               currentAnimation={currentAnimation}
               position={[0.5, 0.35, 0]}
               rotation={[12.6, -0.6, 0]}
               scale={[0.5, 0.5, 0.5]}
             />
-          </Suspense>
+          {/* </Suspense> */}
         </Canvas>
       </div>
     </section>
