@@ -8,7 +8,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 import React from "react";
-import { skills, experiences } from "../constants";
+import { skills, experiences } from "../constants/index";
 import CTA from "../components/CTA";
 
 const About = () => {
@@ -17,7 +17,7 @@ const About = () => {
       <h1 className="head-text">
         Hello, I'm{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
-          Adrian
+          Valen
         </span>
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
@@ -30,7 +30,7 @@ const About = () => {
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">My Skills</h3>
 
-        {/* key的部分要下修 Done! */}
+      
 
         <div className="mt-16 flex flex-wrap gap-12">
           {skills.map((skill) => (
@@ -96,7 +96,7 @@ const About = () => {
                   {experience.points.map((point, index) => (
                     <li
                       key={`experience-point-${index}`}
-                      className="text-black-500/50 font-normal pl-1 text-sm"
+                      className="text-black-100/50 font-normal pl-1 text-sm"
                     >
                       {point}
                     </li>

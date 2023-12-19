@@ -15,13 +15,13 @@ const InfoBox = ({ text, link, btnText }) => (
 const renderContent = {
   1: (
     <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
-      Hi, I am <span className="font-semibold">Valen</span>👋
-      <br />A Software Engineer from Croatia
+      您好，我是 <span className="font-semibold">Valen</span>👋
+      <br />一名前端開發人員
     </h1>
   ),
   2: (
     <InfoBox
-      text="Worked with many companies and picked up many skills along the way"
+      text="在自我學習的道路上逐步前進，歡迎點擊下面連結認識更多😀"
       link="/about"
       btnText="Learn more"
     />
@@ -29,16 +29,16 @@ const renderContent = {
   3: (
     <h1>
       <InfoBox
-        text="Led multiple projects to success over the years. Curious about the impact"
+        text="歡迎點下面連結觀看我的個人作品集，未來會持續更新"
         link="/projects"
-        btnText="Visit my portfolio"
+        btnText="Visit my projects"
       />
     </h1>
   ),
   4: (
     <h1>
       <InfoBox
-        text="Need a project done or looking for a dev? I'm just a few keystrokes away"
+        text="感謝您的觀看，歡迎點擊連結留下聯絡方式讓我與您聯絡"
         link="/contact"
         btnText="Let's talk"
       />
