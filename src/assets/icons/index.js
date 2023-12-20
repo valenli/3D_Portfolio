@@ -27,6 +27,7 @@ import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
 import figma from './figma.svg'
+import threeJs from './ThreeJs.svg'
 
 export {
     css,
@@ -58,4 +59,5 @@ export {
     soundon,
     soundoff,
     figma,
+    threeJs
 }

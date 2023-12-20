@@ -16,6 +16,7 @@ import {
   summiz,
   tailwindcss,
   figma,
+  threeJs
 } from "../assets/icons";
 //技能樹
 
@@ -76,6 +77,11 @@ export const skills = [
     name: "Figma",
     type: "Frontend",
   },
+  {
+    imageUrl: threeJs,
+    name: "Three.js",
+    type: "Frontend",
+  },
 ];
 //經驗
 export const experiences = [
@@ -116,17 +122,19 @@ export const projects = [
   {
     iconUrl: summiz,
     theme: "btn-back-red",
-    name: "Admin Dashboard",
+    name: "後台數據管理",
     description:
-      "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://github.com/valenli/Admin_Dashboard",
+    "晚點再修改",
+    github: "https://github.com/valenli/Admin_Dashboard",
+    url: "https://google.com",
   },
   {
     iconUrl: snapgram,
     theme: "btn-back-green",
-    name: "3D Portfolio",
+    name: "個人部落格",
     description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: "https://github.com/valenli/3D_Portfolio?tab=readme-ov-file",
+    '此項作品利用到了React框架，並使用了Three.js與Email.js以及其他動畫庫來呈現，在未來會持續更新內容',
+    github: "https://github.com/valenli/3D_Portfolio?tab=readme-ov-file",
+    url: "https://google.com",
   },
 ];

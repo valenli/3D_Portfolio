@@ -24,8 +24,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        'service_86zs78o',
+        'template_d6xdqzs',
         {
           from_name: form.name,
           to_name: "Valen",
@@ -33,7 +33,7 @@ const Contact = () => {
           to_email: "contact@jsmastery.pro",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        'CFNDDsED1YIsbIyHJ',
       )
       .then(() => {
         setIsLoading(false);

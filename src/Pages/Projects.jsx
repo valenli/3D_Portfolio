@@ -8,18 +8,14 @@ const Projects = () => {
   return (
     <section className="max-container">
       <h1 className="head-text">
-        My
+        個人
         <span className="blue-gradient_text font-semibold drop-shadow">
-          Projects
+          作品集
         </span>
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          I've embarked on numerous projects throughout the years, but these are
-          the ones I hold closest to my heart. Many of them are open-source, so
-          if you come across something that piques your interest, feel free to
-          explore the codebase and contribute your ideas for further
-          enhancements. Your collaboration is highly valued!
+          未來將會持續推出個人專案
         </p>
       </div>
       <div className="flex flex-wrap my-20 gap-16">
@@ -36,16 +32,25 @@ const Projects = () => {
               </div>
             </div>
             <div className="mt-5 flex flex-col">
-              <h4 className="text-2xl font-poppins font-semibold">{project.name}</h4>
+              <h4 className="text-2xl font-poppins font-semibold">
+                <Link 
+                to={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-black-600"
+                >{project.name}
+                </Link>
+                </h4>
               <p className="mt-2 text-slate-500">{project.description}</p>
+              
               <div className="mt-5 flex items-center gap-2 font-poppins">
                 <Link
-                  to={project.link}
+                  to={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-semibold text-blue-600"
                 >
-                  Live Link
+                  Github
                 </Link>
                 <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
               </div>

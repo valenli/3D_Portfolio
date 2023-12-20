@@ -22,8 +22,7 @@ const About = () => {
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Software Engineer based in Croatia, specializing in technical
-          education through hands-on learning and building applications.
+        學習的過程秉持著每看一次都會有不同的見解，在自我學習的道路上逐步前進，在未來持續朝著軟體工程師的方向邁進。
         </p>
       </div>
 
@@ -52,12 +51,7 @@ const About = () => {
       </div>
       <div className="py-16">
         <h3 className="subhead-text">Work Experience</h3>
-        <div className="mt-5 flex flex-col gap-3 text-slate-500">
-          <p>
-            Software Engineer based in Croatia, specializing in technical
-            education through hands-on learning and building applications.
-          </p>
-        </div>
+        
         <div className="mt-12 flex">
           <VerticalTimeline>
             {experiences.map((experience) => (

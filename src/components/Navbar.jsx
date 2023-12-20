@@ -7,7 +7,7 @@ const Navbar = () => {
         to="/"
         className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md"
       >
-        <p className="blue-gradient_text">AH</p>
+        <p className="blue-gradient_text">V</p>
       </NavLink>
       <nav className="flex text-lg gap-7 font-medium">
         <NavLink
@@ -16,7 +16,7 @@ const Navbar = () => {
             isActive ? "text-blue-500" : "text-black"
           }
         >
-          About
+          關於我
         </NavLink>
         <NavLink
           to="/projects"
@@ -24,7 +24,15 @@ const Navbar = () => {
             isActive ? "text-blue-500" : "text-black"
           }
         >
-          Projects
+          作品
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive ? "text-blue-500" : "text-black"
+          }
+        >
+          聯絡
         </NavLink>
       </nav>
     </header>
