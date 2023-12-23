@@ -16,7 +16,6 @@ import {
   summiz,
   tailwindcss,
   figma,
-  threeJs
 } from "../assets/icons";
 //技能樹
 
