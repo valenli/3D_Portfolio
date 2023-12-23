@@ -77,11 +77,11 @@ export const skills = [
     name: "Figma",
     type: "Frontend",
   },
-  {
-    imageUrl: threeJs,
-    name: "Three.js",
-    type: "Frontend",
-  },
+  // {
+  //   imageUrl: threeJs,
+  //   name: "Three.js",
+  //   type: "Frontend",
+  // },
 ];
 //經驗
 export const experiences = [
