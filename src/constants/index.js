@@ -50,11 +50,11 @@ export const skills = [
     name: "Material-UI",
     type: "Frontend",
   },
-  {
-    imageUrl: nodejs,
-    name: "Node.js",
-    type: "Backend",
-  },
+  // {
+  //   imageUrl: nodejs,
+  //   name: "Node.js",
+  //   type: "Backend",
+  // },
   {
     imageUrl: react,
     name: "React",
