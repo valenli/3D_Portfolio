@@ -116,7 +116,7 @@ const Contact = () => {
               name="message"
               rows={4}
               className="textarea"
-              placeholder={t("know")}
+              placeholder="Let me know how I can help you!"
               required
               value={form.message}
               onChange={handleChange}

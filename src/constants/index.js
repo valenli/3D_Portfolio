@@ -121,7 +121,7 @@ export const projects = [
     theme: "btn-back-green",
     name: "Portfolio",
     description:
-    '此項作品利用到了React框架，並使用了Three.js與Email.js以及其他動畫庫來呈現，在未來會持續更新內容',
+    '此項作品利用到了React框架，並使用了Three.js與Email.js以及其他動畫庫來呈現，最近新增英文及中文翻譯(i18next)，未來將會持續更新',
     github: "https://github.com/valenli/3D_Portfolio?tab=readme-ov-file",
     url: "https://google.com",
   },

@@ -56,6 +56,7 @@ const About = () => {
             </div>
           ))}
         </div>
+        
       </div>
       <div className="py-16">
         <h3 className="subhead-text">{t("experience")}</h3>
