@@ -3,14 +3,21 @@ import { projects } from "../constants";
 import { Link } from "react-router-dom";
 import CTA from "../components/CTA";
 import { arrow } from "../assets/icons";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    
+  };
   return (
     <section className="max-container">
       <h1 className="head-text">
-        個人
+        {t("Personal")}{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
-          作品集
+          {t("Project")}
         </span>
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
@@ -38,7 +45,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-black-600"
-                >{project.name}
+                >{t(project.name)}
                 </Link>
                 </h4>
               <p className="mt-2 text-slate-500">{project.description}</p>

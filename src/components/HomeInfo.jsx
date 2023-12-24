@@ -1,54 +1,66 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
+import { useTranslation } from 'react-i18next';
+
+
+const HomeInfo = ({ currentStage }) => {
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    
+  };
+
 
 const InfoBox = ({ text, link, btnText }) =>
 
 (
   <div className="info-box">
-    <p className="font-medium sm:text-xl text-center">{text}</p>
+    <p className="font-medium sm:text-xl text-center">{t(text)}</p>
     <Link to={link} className="neo-brutalism-white neo-btn">
-      {btnText}
+      {t(btnText)}
       <img src={arrow} className="w-4 h-4 object-contain" />
     </Link>
   </div>
 );
 
-const renderContent = {
-  1: (
-    <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
-      您好，我是 <span className="font-semibold">Valen</span>👋
-      <br />一名前端開發人員
-    </h1>
-  ),
-  2: (
-    <InfoBox
-      text="在自我學習的道路上逐步前進，歡迎點擊下面連結認識更多😀"
-      link="/about"
-      btnText="Learn more"
-    />
-  ),
-  3: (
-    <h1>
+  const renderContent = {
+  
+    1: (
+      <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
+        {t("Hello")} <span className="font-semibold">Valen</span>👋
+        <br />{t("Career")}
+      </h1>
+    ),
+    2: (
       <InfoBox
-        text="歡迎點下面連結觀看我的個人作品集，未來會持續更新"
-        link="/projects"
-        btnText="Visit my projects"
+        text={t("introduction")}
+        link="/about"
+        btnText={t("more")}
       />
-    </h1>
-  ),
-  4: (
-    <h1>
-      <InfoBox
-        text="感謝您的觀看，歡迎點擊連結留下聯絡方式讓我與您聯絡"
-        link="/contact"
-        btnText="Let's talk"
-      />
-    </h1>
-  ),
-};
-
-const HomeInfo = ({ currentStage }) => {
+    ),
+    3: (
+      <h1>
+        <InfoBox
+          text={t("project")}
+          link="/projects"
+          btnText={t("visit.btn")}
+        />
+      </h1>
+    ),
+    4: (
+      <h1>
+        <InfoBox
+          text={t("thx.watch")}
+          link="/contact"
+          btnText={t("talk")}
+        />
+      </h1>
+    ),
+  };
+  
   return renderContent[currentStage] || null;
 };
 

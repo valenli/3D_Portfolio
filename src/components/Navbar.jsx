@@ -34,7 +34,7 @@ const Navbar = () => {
             isActive ? "text-blue-500" : "text-black"
           }
         >
-          {t('products')}
+          {t('Project')}
         </NavLink>
         <NavLink
           to="/contact"

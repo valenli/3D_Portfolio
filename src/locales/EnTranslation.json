@@ -1,5 +1,23 @@
 {
-    "about":"about",
-    "products":"products",
-    "contact":"contact"
+  "about": "about",
+  "Project": "projects",
+  "contact": "contact",
+  "Hello": "Hello, I'm",
+  "Career": "A front-end developer",
+  "introduction": "Gradually moving forward on the path of self-learning, welcome to click the link below to learn more😀",
+  "more": "Learn more",
+  "project": "Welcome to click the link below to view my personal portfolio, which will be continuously updated in the future",
+  "visit.btn": "Visit my projects",
+  "thx.watch": "Thank you for watching. Please click on the link and leave your contact information for me to contact you",
+  "talk": "Let's talk",
+  "contact.me":"Welcome to click the link on the right to leave a message and contact me",
+  "contact.btn":"Contact",
+  "introduction.2":"The process of learning is based on the belief that you will have different insights every time you watch it. You will gradually move forward on the road of self-learning and continue to move towards becoming a software engineer in the future.",
+  "skill":"My Skills",
+  "experience":"Work Experience",
+  "point.1":"Actively respond to business needs and onboard customer projects.",
+  "point.2":"Keep up with business development, integrate internal development results on an irregular basis, and proactively provide customers with technical requirements and solutions to ensure customer competitiveness.",
+  "point.3":"Organize, file, and maintain customer information, vendor information, and related files and documents.",
+  "point.4":"Understand the customer's market conditions and make reasonable estimates of the customer's future capacity needs.",
+  "know":"Let me know how I can help you!"
 }

@@ -2,9 +2,10 @@ import React, { Suspense, useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import Fox from "../models/Fox";
-import { Loader } from "@react-three/drei";
+
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -13,6 +14,13 @@ const Contact = () => {
   const [currentAnimation, setCurrentAnimation] = useState("idle");
 
   const { alert, showAlert, hideAlert } = useAlert();
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    
+  };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -68,14 +76,14 @@ const Contact = () => {
       {alert.show && <Alert {...alert} />}
 
       <div className="flex-1 min-w-[50%] flex flex-col">
-        <h1 className="head-text">Get in Touch</h1>
+        <h1 className="head-text">{t("Get in Touch")}</h1>
         <form
           ref={formRef}
           className="w-full flex flex-col gap-7 mt-14"
           onSubmit={handleSubmit}
         >
           <label className="text-black-500 font-semibold">
-            Name
+            {t("Name")}
             <input
               type="text"
               name="name"
@@ -89,7 +97,7 @@ const Contact = () => {
             />
           </label>
           <label className="text-black-500 font-semibold">
-            Email
+            {t("Email")}
             <input
               type="email"
               name="email"
@@ -103,12 +111,12 @@ const Contact = () => {
             />
           </label>
           <label className="text-black-500 font-semibold">
-            Your Message
+            {t("Your Message")}
             <textarea
               name="message"
               rows={4}
               className="textarea"
-              placeholder="Let me know how I can help you!"
+              placeholder={t("know")}
               required
               value={form.message}
               onChange={handleChange}
@@ -123,7 +131,7 @@ const Contact = () => {
             onFocus={handleFocus}
             onBlur={handleBlur}
           >
-            {isLoading ? "Sending..." : "Send Message"}
+            {t(isLoading ? "Sending..." : "Send Message")}
           </button>
         </form>
       </div>
@@ -139,14 +147,14 @@ const Contact = () => {
         >
           <directionalLight intensity={2.5} position={[0, 0, 1]} />
           <ambientLight intensity={0.5} />
-          {/* <Suspense fallback={<Loader />}> */}
+
             <Fox
               currentAnimation={currentAnimation}
               position={[0.5, 0.35, 0]}
               rotation={[12.6, -0.6, 0]}
               scale={[0.5, 0.5, 0.5]}
             />
-          {/* </Suspense> */}
+
         </Canvas>
       </div>
     </section>

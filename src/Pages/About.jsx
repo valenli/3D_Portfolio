@@ -10,24 +10,32 @@ import "react-vertical-timeline-component/style.min.css";
 import React from "react";
 import { skills, experiences } from "../constants/index";
 import CTA from "../components/CTA";
+import { useTranslation } from "react-i18next";
+
 
 const About = () => {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    
+  };
   return (
     <section className="max-container">
       <h1 className="head-text">
-        Hello, I'm{" "}
+        {t("Hello")}{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
           Valen
         </span>
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-        學習的過程秉持著每看一次都會有不同的見解，在自我學習的道路上逐步前進，在未來持續朝著軟體工程師的方向邁進。
+        {t("introduction.2")}
         </p>
       </div>
 
       <div className="py-10 flex flex-col">
-        <h3 className="subhead-text">My Skills</h3>
+        <h3 className="subhead-text">{t("skill")}</h3>
 
       
 
@@ -50,7 +58,7 @@ const About = () => {
         </div>
       </div>
       <div className="py-16">
-        <h3 className="subhead-text">Work Experience</h3>
+        <h3 className="subhead-text">{t("experience")}</h3>
         
         <div className="mt-12 flex">
           <VerticalTimeline>
@@ -77,7 +85,7 @@ const About = () => {
               >
                 <div>
                   <h3 className="text-black text-xl font-poppins font-semibold">
-                    {experience.title}
+                    {t(experience.title)}
                   </h3>
                   <p
                     className="text-black-500 font-medium font-base"
@@ -87,12 +95,12 @@ const About = () => {
                   </p>
                 </div>
                 <ul className="my-5 list-disc ml-5 space-y-2">
-                  {experience.points.map((point, index) => (
+                  {experience.point.map((point, index) => (
                     <li
                       key={`experience-point-${index}`}
                       className="text-black-100/50 font-normal pl-1 text-sm"
                     >
-                      {point}
+                      {t(point)}
                     </li>
                   ))}
                 </ul>
