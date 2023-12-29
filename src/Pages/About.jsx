@@ -1,6 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
-
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -12,13 +9,11 @@ import { skills, experiences } from "../constants/index";
 import CTA from "../components/CTA";
 import { useTranslation } from "react-i18next";
 
-
 const About = () => {
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    
   };
   return (
     <section className="max-container">
@@ -29,38 +24,38 @@ const About = () => {
         </span>
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
-        <p>
-        {t("introduction.2")}
-        </p>
+        <p>{t("introduction.2")}</p>
       </div>
 
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">{t("skill")}</h3>
 
-      
-
-        <div className="mt-16 flex flex-wrap gap-12">
+        <div className='mt-16 flex flex-wrap gap-9 md:gap-9 justify-center xl:justify-start'>
           {skills.map((skill) => (
-            <div
-              key={skill.id || uuidv4()}
-              className="block-container w-20 h-20"
-            >
-              <div className="btn-back rounded-xl" />
-              <div className="btn-front rounded-xl flex justify-center items-center">
-                <img
-                  src={skill.imageUrl}
-                  alt={skill.name}
-                  className="w-1/2 h-1/2 object-contain"
-                />
+            <div key={skill.name} className=''>
+              <div className='block-container w-16 h-16 md:w-20 md:h-20'>
+                <div className='btn-back rounded-xl' />
+                <div className='btn-front rounded-xl flex justify-evenly items-center'>
+                  <img
+                    src={skill.imageUrl}
+                    alt={skill.name}
+                    className='w-1/2 h-1/2 object-contain'
+                  />
+                </div>
+              </div>
+              <div
+                key={skill.name}
+                className='flex justify-center flex-wrap w-16 md:w-20 mt-1.5 text-center text-xs md:text-sm text-[#eeeeee]'
+              >
+                <p className='text-slate-500'>{skill.name}</p>
               </div>
             </div>
           ))}
         </div>
-        
       </div>
       <div className="py-16">
         <h3 className="subhead-text">{t("experience")}</h3>
-        
+
         <div className="mt-12 flex">
           <VerticalTimeline>
             {experiences.map((experience) => (
