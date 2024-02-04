@@ -109,7 +109,7 @@ export const projects = [
     theme: "btn-back-red",
     name: "Admin Dashboard",
     description:
-    "主要想法為在面對公司型客戶所需的後台管理功能而練習並加以修改功能做持續的更新。",
+    "以React為主的框架網站，用於模擬業界b2c操控後台數據管理頁面。",
     github: "https://github.com/valenli/Admin_Dashboard",
     url: "https://google.com",
   },
@@ -118,7 +118,7 @@ export const projects = [
     theme: "btn-back-green",
     name: "Portfolio",
     description:
-    '此項作品利用到了React框架，並使用了Three.js與Email.js以及其他動畫庫來呈現，最近新增多國語，隨著學習的時間推移，網站內容也會持續的更新與壯大',
+    '觀看 Youtube 的 Clone 影片，Clone 出 3D Portfolio，初步的認識如何使用 React 做出 3D 網站，也將影片中學習到的技術與套件使用到自己的個人網站上。',
     github: "https://github.com/valenli/3D_Portfolio?tab=readme-ov-file",
     url: "https://google.com",
   },

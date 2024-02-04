@@ -2,20 +2,17 @@ import { NavLink } from "react-router-dom";
 import { IoLanguage } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 
+
 const Navbar = () => {
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    
   };
 
   return (
     <header className="header">
-      <NavLink
-        to="/"
-        className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md"
-      >
+      <NavLink to="/" className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
         <p className="blue-gradient_text">V</p>
       </NavLink>
 
@@ -34,7 +31,7 @@ const Navbar = () => {
             isActive ? "text-blue-500" : "text-black"
           }
         >
-          {t('Project')}
+          {t("Project")}
         </NavLink>
         <NavLink
           to="/contact"
@@ -44,10 +41,9 @@ const Navbar = () => {
         >
           {t("contact")}
         </NavLink>
-        <button
-          onClick={() => changeLanguage(i18n.language === "en" ? "zh" : "en") }
+        <button 
+          onClick={() => changeLanguage(i18n.language === "en" ? "zh" : "en")}
         >
-          
           <IoLanguage />
         </button>
       </nav>

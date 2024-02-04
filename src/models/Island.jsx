@@ -39,18 +39,11 @@ const Island = ({
     lastX.current = clientX;
   };
 
-
-
-
   const handlePointerUp = (e) => {
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(false);
   };
-
-
-
-
 
   const handlePointerMove = (e) => {
     e.stopPropagation();
@@ -65,9 +58,6 @@ const Island = ({
     }
   };
 
-
-
-
   const handleKeyDown = (e) => {
     if (e.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true);
@@ -80,8 +70,6 @@ const Island = ({
       rotationSpeed.current = -0.0125;
     }
   };
-
-
 
 
   const handleKeyUp = (e) => {

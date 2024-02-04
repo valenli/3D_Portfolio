@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import Fox from "../models/Fox";
 
+
+
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
 import { useTranslation } from "react-i18next";
@@ -155,6 +157,7 @@ const Contact = () => {
               scale={[0.5, 0.5, 0.5]}
             />
 
+          
         </Canvas>
       </div>
     </section>
