@@ -41,24 +41,24 @@ const InfoBox = ({ text, link, btnText }) =>
         btnText={t("more")}
       />
     ),
-    3: (
-      <h1>
-        <InfoBox
-          text={t("project")}
-          link="/projects"
-          btnText={t("visit.btn")}
-        />
-      </h1>
-    ),
-    4: (
-      <h1>
-        <InfoBox
-          text={t("thx.watch")}
-          link="/contact"
-          btnText={t("talk")}
-        />
-      </h1>
-    ),
+    // 3: (
+    //   <h1>
+    //     <InfoBox
+    //       text={t("project")}
+    //       link="/projects"
+    //       btnText={t("visit.btn")}
+    //     />
+    //   </h1>
+    // ),
+    // 4: (
+    //   <h1>
+    //     <InfoBox
+    //       text={t("thx.watch")}
+    //       link="/contact"
+    //       btnText={t("talk")}
+    //     />
+    //   </h1>
+    // ),
   };
   
   return renderContent[currentStage] || null;
